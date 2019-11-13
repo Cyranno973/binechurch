@@ -100,8 +100,8 @@ header nav ul li a:hover, header nav ul li a.active {
   justify-content: center;
   position: absolute;
   top: 54%;
-  right: 21%;
-  border-left: 1px solid #fff !important;
+  right: 41%;
+  border-left: 1px solid #fff ;
   height: 250px;
   align-items: center;
   padding-left: 68px;
@@ -124,6 +124,68 @@ header nav ul li a:hover, header nav ul li a.active {
   font-size: 20px;
   margin: 0;
 }
+
+.item-1, 
+.item-2, 
+.item-3 {
+	position: absolute;
+  display: block;
+	top: 2em;
+  
+  width: 400px;
+  
+  font-size: 2em;
+  
+
+	animation-duration: 15s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+}
+
+.item-1{
+	animation-name: anim-1;
+}
+
+.item-2{
+	animation-name: anim-2;
+}
+
+.item-3{
+	animation-name: anim-3;
+}
+
+@keyframes anim-1 {
+	0%, 8.3% { left: -100%; opacity: 0; }
+  8.3%,25% { left: 15%; opacity: 1; }
+  33.33%, 100% { left: 110%; opacity: 0; }
+}
+
+@keyframes anim-2 {
+	0%, 33.33% { left: -100%; opacity: 0; }
+  41.63%, 58.29% { left: 25%; opacity: 1; }
+  66.66%, 100% { left: 110%; opacity: 0; }
+}
+
+@keyframes anim-3 {
+	0%, 66.66% { left: -100%; opacity: 0; }
+  74.96%, 91.62% { left: 25%; opacity: 1; }
+  100% { left: 110%; opacity: 0; }
+}
+
+@keyframes a-ltr-after{
+  0% {transform: translateX(-100%)}
+  100% {transform: translateX(101%)}
+}
+
+@keyframes a-ltr-before{
+  0% {transform: translateX(0)}
+  100% {transform: translateX(200%)}
+}
+
+
+
+
+
 
 #videoBG {
   background-size: cover;
@@ -248,4 +310,51 @@ video {
     max-width: 300px;
     margin: 10px 0;
   }
+}
+
+
+@media (max-width: 800px) {
+
+  .text-content {
+    position: relative;
+    top: 0%;
+    justify-content: center;
+    right: 20%;
+    border-left: 0px solid #fff ;
+    height: 0px;
+    align-items: center;
+    padding-left: 0px;
+  }
+
+  .item-1, 
+  .item-2, 
+  .item-3 {
+    position: absolute;
+    display: block;
+    top: 4em;
+    
+
+  }
+
+  @keyframes anim-1 {
+    0%, 8.3% { left: -100%; opacity: 0; }
+    8.3%,25% { left: 22%; opacity: 1; }
+    33.33%, 100% { left: 110%; opacity: 0; }
+  }
+  
+  @keyframes anim-2 {
+    0%, 33.33% { left: -100%; opacity: 0; }
+    41.63%, 58.29% { left: 35%; opacity: 1; }
+    66.66%, 100% { left: 110%; opacity: 0; }
+  }
+  
+  @keyframes anim-3 {
+    0%, 66.66% { left: -100%; opacity: 0; }
+    74.96%, 91.62% { left: 35%; opacity: 1; }
+    100% { left: 110%; opacity: 0; }
+  }
+  
+
+
+
 }
