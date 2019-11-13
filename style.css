@@ -179,13 +179,13 @@ video {
 
 @keyframes anim-2 {
 	0%, 33.33% { left: -100%; opacity: 0; }
-  41.63%, 58.29% { left: 25%; opacity: 1; }
+  41.63%, 58.29% { left: 15%; opacity: 1; }
   66.66%, 100% { left: 110%; opacity: 0; }
 }
 
 @keyframes anim-3 {
 	0%, 66.66% { left: -100%; opacity: 0; }
-  74.96%, 91.62% { left: 25%; opacity: 1; }
+  74.96%, 91.62% { left: 15%; opacity: 1; }
   100% { left: 110%; opacity: 0; }
 }
 
