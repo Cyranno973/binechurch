@@ -292,15 +292,36 @@ video {
 }
 
 .encart-notre-eglise-box{
-  display: flex;
-  
+
+ 
   justify-content: center;
 }
+
+.img{
+  width: 100%;
+}
+
+.encart-notre-eglise-box-BG1{
+  display: flex;
+  top: 0;
+  left: 0;
+  width: 100px; 
+  position: absolute;
+  overflow: hidden;
+}
+
+.encart-notre-eglise-box-BG2{
+  top: 0;
+  right: 0;
+  width: 50%;
+  position: absolute;
+  overflow: hidden;
+}
+
 .encart-notre-eglise-vignette {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 20px;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
   border-radius: 10px;
@@ -313,7 +334,7 @@ video {
 }
 
 .encart-notre-eglise-vignette img {
-  border-radius: 10px 10px 0 0;
+  border-radius: 10px 0 0 10px;
 }
 
 
