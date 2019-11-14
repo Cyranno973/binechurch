@@ -122,7 +122,6 @@ video {
   height: 250px;
   align-items: center;
   padding-left: 68px;
-  z-index: 55;
   transition: all 3s;
 }
 
@@ -207,7 +206,8 @@ video {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 20px;
+  padding-top: 4%;
+  padding-bottom: 7%;
 }
 
 .contact-info {
@@ -222,7 +222,7 @@ video {
 .card {
   background: #2f3542;
   padding: 0 20px;
-  margin: 0 10px;
+  margin: 0 40px;
   width: calc(33%-20px);
   height: 200px;
   display: flex;
@@ -269,7 +269,7 @@ video {
   border-bottom: 4em solid #fff;
   border-radius: .25em;
   box-shadow: 1em 1em 2em .25em rgba(0,0,0,.2);
-  margin: 2em auto;
+  
   opacity: 0;
   transform: translateY(4em) rotateZ(-20deg);
   transition: transform 4s .25s cubic-bezier(0,1,.3,1),
@@ -288,7 +288,7 @@ video {
 
 @keyframes move {
   from { margin-left: 200px; }
-  to { margin-left: 0px; }
+  to { margin-left: 40px; }
 }
 
 
@@ -365,34 +365,42 @@ video {
   z-index: 2;
   overflow: hidden;
 }
-.encart-notre-eglise-photo {
-display: flex;
-   
-}
-.encart-notre-eglise-photo img{
-  width: 100%;
-
-   
-}
-
-.encart-notre-eglise-text{
-  background: #f7f7f7 none repeat scroll 0 0;
-  width: 25%;
-  align-items: center;
-  justify-content: center;
-  
-}
 
 .encart-notre-eglise-vignette:hover {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
-.encart-notre-eglise-vignette img {
+.encart-notre-eglise-photo {
+  display: flex;
+  width: 100%;
+}
+.encart-notre-eglise-photo img{
+  width: 100%;
   border-radius: 10px 0 0 10px;
+   
 }
 
+.encart-notre-eglise-text{
+  display: flex;
+  flex-direction: column;
+  background: #f7f7f7 none repeat scroll 0 0;
+  height: 100%;
+  
+  justify-content: center;
+  padding: 5%;
+  font-size: 18px;
+  font-family: "Lato"; 
+  font-weight: 300;
+}
 
+.encart-notre-eglise-text h3{
+padding-bottom: 3%;
+}
 
+.encart-notre-eglise-text p{
+  text-align: justify;
+  
+}
 
 
 /*  media queries  */
