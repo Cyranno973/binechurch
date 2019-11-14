@@ -316,8 +316,10 @@ video {
   border-radius: 10px 10px 0 0;
 }
 
-
-
+#allEvents
+{
+  background-color: red;
+}
 
 
 /*  media queries  */
