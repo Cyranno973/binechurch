@@ -291,42 +291,96 @@ video {
   to { margin-left: 0px; }
 }
 
+
+
+
+.encart-notre-eglise{
+  position: relative;
+
+
+  
+}
+
 .encart-notre-eglise-box{
-
- 
-  justify-content: center;
-}
-
-.img{
-  width: 100%;
-}
-
-.encart-notre-eglise-box-BG1{
   display: flex;
-  top: 0;
-  left: 0;
-  width: 100px; 
-  position: absolute;
-  overflow: hidden;
+  height: 52vh;
+ 
+  
 }
 
-.encart-notre-eglise-box-BG2{
-  top: 0;
+
+.encart-notre-eglise-box-BG1 {
+  /* The image used */
+  background-image: url("./images/croix_ext3.png");
+  width: 50%; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */
+@media only screen and (max-device-width: 1366px) {
+  .parallax {
+    background-attachment: scroll;
+  }
+}
+
+
+.encart-notre-eglise-box-BG2 {
+  /* The image used */
   right: 0;
-  width: 50%;
-  position: absolute;
-  overflow: hidden;
+  background-image: url("./images/119-3.png");
+  width: 50%; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */
+@media only screen and (max-device-width: 1366px) {
+  .parallax {
+    background-attachment: scroll;
+  }
 }
 
 .encart-notre-eglise-vignette {
+  top: 0;
+  left: 20%;
+  height: 100%;
   display: flex;
+  position: absolute;
   align-items: center;
   justify-content: center;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
   border-radius: 10px;
   width: 60%;
+  background: #fff none repeat scroll 0 0;
+  z-index: 2;
+  overflow: hidden;
+}
+.encart-notre-eglise-photo {
+display: flex;
+   
+}
+.encart-notre-eglise-photo img{
+  width: 100%;
+
+   
+}
+
+.encart-notre-eglise-text{
   background: #f7f7f7 none repeat scroll 0 0;
+  width: 25%;
+  align-items: center;
+  justify-content: center;
+  
 }
 
 .encart-notre-eglise-vignette:hover {
