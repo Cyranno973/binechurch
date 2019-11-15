@@ -315,6 +315,173 @@ video {
 .encart-notre-eglise-vignette img {
   border-radius: 10px 10px 0 0;
 }
+/*.all-Events{
+  margin-left: 33rem;
+  background-color: #ecf0f1;
+
+}
+*/
+.element-block events-listing{
+  color: #8d8d8d;
+
+  display: flex;
+  justify-content: center;
+  
+}
+.element-title{
+  font-size: 22px;
+  margin: 0 0 18px 0;
+  color: #333333;
+  font-weight: 400;
+  line-height: 1.5em;
+  letter-spacing: 1px;
+
+}
+hr.sm {
+  display: inline-block;
+  margin: 0 0 15px 0;
+  width: 40px;
+  height: 2px;
+  border: 0;
+
+}
+
+.events-listing-content {
+  margin: 0;
+  list-style-type: none;
+  overflow: visible!important;
+
+}
+.event-list-item {
+  padding-top: 2px;
+   
+}
+.event-list-item-date {
+  float: left;
+  width: 15%;
+  margin-right: 2%;
+    
+}
+
+.event-list-item-date .event-date {
+  border: 2px solid #f8f8f8;
+  background-image: url(images/dashed.png);
+  text-align: center;
+  height: 100px;
+  width: 95px;
+  display: block;
+  margin-top: 3px;
+  -webkit-transition: all 0.3s ease 0.2s;
+  -moz-transition: all 0.3s ease 0.2s;
+  -ms-transition: all 0.3s ease 0.2s;
+  -o-transition: all 0.3s ease 0.2s;
+  transition: all 0.3s ease 0.1s;
+  clear: both;
+}
+
+.event-list-item-date .event-day {
+  font-size: 40px;
+  color: #222;
+  font-weight: 700;
+  display: block;
+  padding-top: 29px;
+    
+}
+.event-list-item-date .event-month {
+  padding-top: 5px;
+  display: block;
+}
+.event-list-item-info {
+ 
+  padding-bottom: 34px;
+  width: 64%;
+  padding-right: 2%;
+  border-right: 2px solid #f8f8f8;
+  margin-right: 2%;
+  clear: both;
+}
+.event-list-item-info .lined-info:first-child {
+  padding-top: 0;
+    
+}
+
+.lined-info {
+  border-bottom: 1px solid #f8f8f8;
+  padding: 5px 0;
+  clear: both;
+}
+.lined-info h4 {
+  margin-bottom: 0;
+  letter-spacing: 0;
+  text-transform: none;
+  font-weight: 400;
+  font-size: 17px;
+    
+}
+h4 a {
+  color: #555;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease 0.2s;
+  -moz-transition: all 0.3s ease 0.2s;
+  -ms-transition: all 0.3s ease 0.2s;
+  -o-transition: all 0.3s ease 0.2s;
+  transition: all 0.3s ease 0.1s;
+  clear: both;
+}
+
+.lined-info {
+  border-bottom: 1px solid #f8f8f8;
+  padding: 5px 0;
+    
+}
+.meta-data {
+  color: #999;
+  font-style: italic;
+  font-size: 12px;
+  font-weight: 400;
+  font-family: "Volkhov", serif;
+  clear: both;
+}
+
+.meta-data i {
+  margin-right: 4px;
+    
+}
+
+.meta-data > span {
+  display: inline-block;
+    
+}
+
+.meta-data span.label {
+  font-style: normal;
+  font-weight: 400;
+  padding-top: 0.4em;
+    
+}
+.meta-data > span:last-child {
+  margin-right: 0;
+  clear: both
+}
+.meta-data > span {
+  display: inline-block;
+  clear: both
+}
+
+.meta-data > span:last-child {
+  margin-right: 0;
+  clear: both
+}
+
+.meta-data > span {
+  display: inline-block;
+  clear: both
+}
+
+
+
+
 
 
 
@@ -328,6 +495,8 @@ video {
 
   .menu-toggle {
     display: block;
+    font: inherit;
+    font-size: 100%
   }
 
   header nav {
