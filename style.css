@@ -67,7 +67,7 @@ header nav ul li a {
 
 header nav ul li a:hover, header nav ul li a.active {
   color: #fff;
-  background-color: #2196f3;
+  background-color: rgb(108, 152, 189);
   text-decoration: none;
 }
 
@@ -223,7 +223,7 @@ video {
   background: #2f3542;
   padding: 0 20px;
   margin: 0 40px;
-  width: calc(33%-20px);
+  width: 1px;
   height: 200px;
   display: flex;
   flex-direction: column;
@@ -275,7 +275,7 @@ video {
   transition: transform 4s .25s cubic-bezier(0,1,.3,1),
               opacity .3s .25s ease-out;
   max-width: 600px;
-  width: 90%;
+  width: 20%;
   will-change: transform, opacity;
   
 }
@@ -286,11 +286,12 @@ video {
   animation: move 2s;
 }
 
+/*
 @keyframes move {
   from { margin-left: 200px; }
   to { margin-left: 40px; }
 }
-
+*/
 
 /*#################   encart-notre-eglise et parallaxe #########################*/
 /*#################   encart-notre-eglise et parallaxe #########################*/
@@ -352,7 +353,7 @@ video {
   border-radius: 10px;
   width: 60%;
   background: #fff none repeat scroll 0 0;
-  z-index: 2;
+
   overflow: hidden;
 }
 
@@ -368,6 +369,35 @@ video {
   width: 100%;
   border-radius: 10px 0 0 10px;
 }
+
+.encart-notre-eglise-text{
+  display: flex;
+  flex-direction: column;
+  background: #f7f7f7 none repeat scroll 0 0;
+  height: 100%;
+  justify-content: center;
+  padding: 5%;
+  font-size: 18px;
+  font-family: "Lato"; 
+  font-weight: 300;
+}
+
+.encart-notre-eglise-text h3{
+padding-bottom: 3%;
+}
+
+.encart-notre-eglise-text p{
+  text-align: justify;
+}
+
+
+
+/****************Calendrier*****************/
+/****************Calendrier*****************/
+/****************Calendrier*****************/
+/****************Calendrier*****************/
+
+
 /*.all-Events{
   margin-left: 33rem;
   background-color: #ecf0f1;
@@ -536,25 +566,6 @@ h4 a {
 
 
 
-.encart-notre-eglise-text{
-  display: flex;
-  flex-direction: column;
-  background: #f7f7f7 none repeat scroll 0 0;
-  height: 100%;
-  justify-content: center;
-  padding: 5%;
-  font-size: 18px;
-  font-family: "Lato"; 
-  font-weight: 300;
-}
-
-.encart-notre-eglise-text h3{
-padding-bottom: 3%;
-}
-
-.encart-notre-eglise-text p{
-  text-align: justify;
-}
 
 
 /*  media queries  */
@@ -605,7 +616,7 @@ padding-bottom: 3%;
   }
 
   .card {
-    width: 100%;
+    width: 50%;
     max-width: 300px;
     margin: 10px 0;
   }
@@ -645,17 +656,124 @@ padding-bottom: 3%;
   
   @keyframes anim-2 {
     0%, 33.33% { left: -100%; opacity: 0; }
-    41.63%, 58.29% { left: 35%; opacity: 1; }
+    41.63%, 58.29% { left: 22%; opacity: 1; }
     66.66%, 100% { left: 110%; opacity: 0; }
   }
   
   @keyframes anim-3 {
     0%, 66.66% { left: -100%; opacity: 0; }
-    74.96%, 91.62% { left: 35%; opacity: 1; }
+    74.96%, 91.62% { left: 22%; opacity: 1; }
     100% { left: 110%; opacity: 0; }
   }
   
+}
+
+/****************audio*****************/
+/****************audio*****************/
+/****************audio*****************/
+/****************audio*****************/
 
 
+.encart-audio{
+  position: relative;
+}
 
+.encart-audio-box{
+  display: flex;
+  height: 500px;
+}
+
+
+.encart-audio-box-BG1 {
+  /* The image used */
+  background-image: url("./images/foule.jpg");
+  width: 50%; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.encart-audio-box-BG2 {
+  /* The image used */
+  right: 0;
+  background-image: url("./images/foule.jpg");
+  width: 50%; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */
+@media only screen and (max-device-width: 1366px) {
+  .parallax {
+    background-attachment: scroll;
+  }
+}
+
+.encart-audio-vignette {
+  top: 0;
+  left: 20%;
+  height: 500px;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: 10px;
+  width: 60%;
+  background: #fff none repeat scroll 0 0;
+
+  
+}
+
+.encart-audio-vignette:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.encart-audio-photo {
+  display: flex;
+  height: 500px;
+}
+.encart-audio-photo img{
+  height: 500px;
+  border-radius: 10px 0 0 10px;
+}
+
+.encart-audio-text{
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  background: #f7f7f7 none repeat scroll 0 0;
+  width: 100%;
+  height: 500px;
+  justify-content: center;
+  padding-left: 5%;
+  padding-right: 5%;
+  font-size: 18px;
+  font-family: "Lato"; 
+  font-weight: 300;
+}
+
+.encart-audio-text h3{
+padding-bottom: 3%;
+}
+
+.encart-audio-text p{
+  text-align: justify;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  background-color: rgb(53, 70, 90);
+  color: #fff;
 }

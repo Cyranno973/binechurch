@@ -1,3 +1,6 @@
+
+
+//menu burger
 $(document).ready(function() {
   $('.menu-toggle').click(function() {
     $('nav').toggleClass('active');
@@ -12,6 +15,8 @@ menuElt.addEventListener('click', (e) => {
 });
 
 
+
+//animation top menu transparance
 var  header = document.getElementById('header');
   
   window.onscroll = function(){
@@ -27,7 +32,7 @@ var  header = document.getElementById('header');
 	}
   }
 
-
+//animation  cards
 
 // Detect request animation frame
 var scroll = window.requestAnimationFrame ||
@@ -50,6 +55,7 @@ function loop() {
 
 // Call the loop for the first time
 loop();
+
 
 // Helper function from: http://stackoverflow.com/a/7557433/274826
 function isElementInViewport(el) {
