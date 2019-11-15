@@ -292,26 +292,23 @@ video {
 }
 
 
-
+/*#################   encart-notre-eglise et parallaxe #########################*/
+/*#################   encart-notre-eglise et parallaxe #########################*/
+/*#################   encart-notre-eglise et parallaxe #########################*/
 
 .encart-notre-eglise{
   position: relative;
-
-
-  
 }
 
 .encart-notre-eglise-box{
   display: flex;
   height: 52vh;
- 
-  
 }
 
 
 .encart-notre-eglise-box-BG1 {
   /* The image used */
-  background-image: url("./images/croix_ext3.png");
+  background-image: url("./images/concept-1.jpg");
   width: 50%; 
 
   /* Create the parallax scrolling effect */
@@ -321,18 +318,11 @@ video {
   background-size: cover;
 }
 
-/* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */
-@media only screen and (max-device-width: 1366px) {
-  .parallax {
-    background-attachment: scroll;
-  }
-}
-
 
 .encart-notre-eglise-box-BG2 {
   /* The image used */
   right: 0;
-  background-image: url("./images/119-3.png");
+  background-image: url("./images/concept-1.jpg");
   width: 50%; 
 
   /* Create the parallax scrolling effect */
@@ -377,7 +367,6 @@ video {
 .encart-notre-eglise-photo img{
   width: 100%;
   border-radius: 10px 0 0 10px;
-   
 }
 
 .encart-notre-eglise-text{
@@ -385,7 +374,6 @@ video {
   flex-direction: column;
   background: #f7f7f7 none repeat scroll 0 0;
   height: 100%;
-  
   justify-content: center;
   padding: 5%;
   font-size: 18px;
@@ -399,7 +387,6 @@ padding-bottom: 3%;
 
 .encart-notre-eglise-text p{
   text-align: justify;
-  
 }
 
 
