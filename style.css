@@ -299,11 +299,14 @@ video {
 
 .encart-notre-eglise{
   position: relative;
+  -webkit-box-shadow: 0 8px 6px -6px black;
+  -moz-box-shadow: 0 8px 6px -6px black;
+       box-shadow: 0 8px 6px -6px black;
 }
 
 .encart-notre-eglise-box{
   display: flex;
-  height: 52vh;
+  height: 500px;
 }
 
 
@@ -334,8 +337,8 @@ video {
 }
 
 /* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */
-@media only screen and (max-device-width: 1366px) {
-  .parallax {
+@media only screen and (max-device-width: 1260px) {
+  .encart-notre-eglise-box-BG1 .encart-notre-eglise-box-BG2 {
     background-attachment: scroll;
   }
 }
@@ -392,107 +395,6 @@ padding-bottom: 3%;
 
 
 
-
-
-/*  media queries  */
-@media (max-width: 1260px) {
-  header {
-    padding: 0 20px;
-  }
-
-  .menu-toggle {
-    display: block;
-    font: inherit;
-    font-size: 100%
-  }
-
-  header nav {
-    position: absolute;
-    width: 100%;
-    height: calc(100vh - 50px);
-    background-color: #ffffff;
-    top: 54px;
-    right: -100%;
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
-    display: none;
-    overflow: scroll;
-  }
-
-  header nav.active {
-    right: 0;
-  }
-
-  header nav ul {
-    display: block;
-    text-align: center;
-  }
-
-  header nav ul li a {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  }
-
-  .text-content {
-    position: absolute;
-    top: 14%;
-  }
-
-  .contact-info {
-    flex-direction: column;
-  }
-
-  .card {
-    width: 50%;
-    max-width: 300px;
-    margin: 10px 0;
-  }
-}
-
-
-
-@media (max-width: 800px) {
-
-  .text-content {
-    position: relative;
-    top: 0%;
-    justify-content: center;
-    right: 20%;
-    border-left: 0px solid #fff ;
-    height: 0px;
-    align-items: center;
-    padding-left: 0px;
-  }
-
-  .item-1, 
-  .item-2, 
-  .item-3 {
-    position: absolute;
-    display: block;
-    top: 4em;
-    
-
-  }
-  
-
-  @keyframes anim-1 {
-    0%, 8.3% { left: -100%; opacity: 0; }
-    8.3%,25% { left: 22%; opacity: 1; }
-    33.33%, 100% { left: 110%; opacity: 0; }
-  }
-  
-  @keyframes anim-2 {
-    0%, 33.33% { left: -100%; opacity: 0; }
-    41.63%, 58.29% { left: 22%; opacity: 1; }
-    66.66%, 100% { left: 110%; opacity: 0; }
-  }
-  
-  @keyframes anim-3 {
-    0%, 66.66% { left: -100%; opacity: 0; }
-    74.96%, 91.62% { left: 22%; opacity: 1; }
-    100% { left: 110%; opacity: 0; }
-  }
-  
-}
 
 /****************audio*****************/
 /****************audio*****************/
@@ -567,6 +469,12 @@ padding-bottom: 3%;
 .encart-audio-photo {
   display: flex;
   height: 500px;
+  background-image: url("./images/mic-1-1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 60%;
+
 }
 .encart-audio-photo img{
   height: 500px;
@@ -615,17 +523,110 @@ footer {
 /****************Calendrier*****************/
 
 
+
+.encart-Calendrier{
+  position: relative;
+}
+
+.encart-Calendrier-box{
+  display: flex;
+  height: 560px;
+}
+
+
+.encart-Calendrier-box-BG1 {
+  /* The image used */
+  background-color: #ffffff;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 56 28' width='56' height='28'%3E%3Cpath fill='%23e7e7e7' fill-opacity='0.4' d='M56 26v2h-7.75c2.3-1.27 4.94-2 7.75-2zm-26 2a2 2 0 1 0-4 0h-4.09A25.98 25.98 0 0 0 0 16v-2c.67 0 1.34.02 2 .07V14a2 2 0 0 0-2-2v-2a4 4 0 0 1 3.98 3.6 28.09 28.09 0 0 1 2.8-3.86A8 8 0 0 0 0 6V4a9.99 9.99 0 0 1 8.17 4.23c.94-.95 1.96-1.83 3.03-2.63A13.98 13.98 0 0 0 0 0h7.75c2 1.1 3.73 2.63 5.1 4.45 1.12-.72 2.3-1.37 3.53-1.93A20.1 20.1 0 0 0 14.28 0h2.7c.45.56.88 1.14 1.29 1.74 1.3-.48 2.63-.87 4-1.15-.11-.2-.23-.4-.36-.59H26v.07a28.4 28.4 0 0 1 4 0V0h4.09l-.37.59c1.38.28 2.72.67 4.01 1.15.4-.6.84-1.18 1.3-1.74h2.69a20.1 20.1 0 0 0-2.1 2.52c1.23.56 2.41 1.2 3.54 1.93A16.08 16.08 0 0 1 48.25 0H56c-4.58 0-8.65 2.2-11.2 5.6 1.07.8 2.09 1.68 3.03 2.63A9.99 9.99 0 0 1 56 4v2a8 8 0 0 0-6.77 3.74c1.03 1.2 1.97 2.5 2.79 3.86A4 4 0 0 1 56 10v2a2 2 0 0 0-2 2.07 28.4 28.4 0 0 1 2-.07v2c-9.2 0-17.3 4.78-21.91 12H30zM7.75 28H0v-2c2.81 0 5.46.73 7.75 2zM56 20v2c-5.6 0-10.65 2.3-14.28 6h-2.7c4.04-4.89 10.15-8 16.98-8zm-39.03 8h-2.69C10.65 24.3 5.6 22 0 22v-2c6.83 0 12.94 3.11 16.97 8zm15.01-.4a28.09 28.09 0 0 1 2.8-3.86 8 8 0 0 0-13.55 0c1.03 1.2 1.97 2.5 2.79 3.86a4 4 0 0 1 7.96 0zm14.29-11.86c1.3-.48 2.63-.87 4-1.15a25.99 25.99 0 0 0-44.55 0c1.38.28 2.72.67 4.01 1.15a21.98 21.98 0 0 1 36.54 0zm-5.43 2.71c1.13-.72 2.3-1.37 3.54-1.93a19.98 19.98 0 0 0-32.76 0c1.23.56 2.41 1.2 3.54 1.93a15.98 15.98 0 0 1 25.68 0zm-4.67 3.78c.94-.95 1.96-1.83 3.03-2.63a13.98 13.98 0 0 0-22.4 0c1.07.8 2.09 1.68 3.03 2.63a9.99 9.99 0 0 1 16.34 0z'%3E%3C/path%3E%3C/svg%3E");
+
+
+  width: 50%; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: repeat;
+}
+
+
+.encart-Calendrier-box-BG2 {
+  /* The image used */
+  right: 0;
+
+  background-color: #ffffff;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 56 28' width='56' height='28'%3E%3Cpath fill='%23e7e7e7' fill-opacity='0.4' d='M56 26v2h-7.75c2.3-1.27 4.94-2 7.75-2zm-26 2a2 2 0 1 0-4 0h-4.09A25.98 25.98 0 0 0 0 16v-2c.67 0 1.34.02 2 .07V14a2 2 0 0 0-2-2v-2a4 4 0 0 1 3.98 3.6 28.09 28.09 0 0 1 2.8-3.86A8 8 0 0 0 0 6V4a9.99 9.99 0 0 1 8.17 4.23c.94-.95 1.96-1.83 3.03-2.63A13.98 13.98 0 0 0 0 0h7.75c2 1.1 3.73 2.63 5.1 4.45 1.12-.72 2.3-1.37 3.53-1.93A20.1 20.1 0 0 0 14.28 0h2.7c.45.56.88 1.14 1.29 1.74 1.3-.48 2.63-.87 4-1.15-.11-.2-.23-.4-.36-.59H26v.07a28.4 28.4 0 0 1 4 0V0h4.09l-.37.59c1.38.28 2.72.67 4.01 1.15.4-.6.84-1.18 1.3-1.74h2.69a20.1 20.1 0 0 0-2.1 2.52c1.23.56 2.41 1.2 3.54 1.93A16.08 16.08 0 0 1 48.25 0H56c-4.58 0-8.65 2.2-11.2 5.6 1.07.8 2.09 1.68 3.03 2.63A9.99 9.99 0 0 1 56 4v2a8 8 0 0 0-6.77 3.74c1.03 1.2 1.97 2.5 2.79 3.86A4 4 0 0 1 56 10v2a2 2 0 0 0-2 2.07 28.4 28.4 0 0 1 2-.07v2c-9.2 0-17.3 4.78-21.91 12H30zM7.75 28H0v-2c2.81 0 5.46.73 7.75 2zM56 20v2c-5.6 0-10.65 2.3-14.28 6h-2.7c4.04-4.89 10.15-8 16.98-8zm-39.03 8h-2.69C10.65 24.3 5.6 22 0 22v-2c6.83 0 12.94 3.11 16.97 8zm15.01-.4a28.09 28.09 0 0 1 2.8-3.86 8 8 0 0 0-13.55 0c1.03 1.2 1.97 2.5 2.79 3.86a4 4 0 0 1 7.96 0zm14.29-11.86c1.3-.48 2.63-.87 4-1.15a25.99 25.99 0 0 0-44.55 0c1.38.28 2.72.67 4.01 1.15a21.98 21.98 0 0 1 36.54 0zm-5.43 2.71c1.13-.72 2.3-1.37 3.54-1.93a19.98 19.98 0 0 0-32.76 0c1.23.56 2.41 1.2 3.54 1.93a15.98 15.98 0 0 1 25.68 0zm-4.67 3.78c.94-.95 1.96-1.83 3.03-2.63a13.98 13.98 0 0 0-22.4 0c1.07.8 2.09 1.68 3.03 2.63a9.99 9.99 0 0 1 16.34 0z'%3E%3C/path%3E%3C/svg%3E");
+
+  width: 50%; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: repeat;
+  
+}
+
+/* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */
+@media only screen and (max-device-width: 1366px) {
+  .parallax {
+    background-attachment: scroll;
+  }
+}
+
+.encart-Calendrier-vignette {
+  top: 0;
+  left: 20%;
+  height: 100%;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+
+  width: 60%;
+ 
+
+  overflow: hidden;
+}
+
+
+.encart-Calendrier-photo {
+  display: flex;
+  width: 40%;
+  padding: 5%;
+
+}
+.encart-Calendrier-photo img{
+  width: 100%;
+
+}
+
+.encart-Calendrier-text{
+  width: 60%;
+  
+  flex-direction: column;
+  background: #fff none repeat scroll 0 0;
+  height: 100%;
+  justify-content: center;
+  padding-top: 5%;
+  
+  font-size: 18px;
+  font-family: "Lato"; 
+  font-weight: 300;
+}
+
+
+
+
+
+
 /*.all-Events{
   margin-left: 33rem;
   background-color: #ecf0f1;
 
 }
 */
-.element-block events-listing{
+.element-block{
   color: #8d8d8d;
-
-  display: flex;
-  justify-content: center;
+  
   
 }
 .element-title{
@@ -646,26 +647,40 @@ hr.sm {
 
 }
 
+.events-listing-header {
+  padding-left: 5%;
+
+}
+
 .events-listing-content {
   margin: 0;
   list-style-type: none;
   overflow: visible!important;
-
+  padding-left: 15%;
+ 
 }
 .event-list-item {
   padding-top: 2px;
+  display: flex;
+
    
 }
 .event-list-item-date {
-  float: left;
-  width: 15%;
-  margin-right: 2%;
+  display: block;
+  padding-right: 5px;
+  width: 100px;
+  margin-right: 5px;
+
     
 }
 
 .event-list-item-date .event-date {
   border: 2px solid #f8f8f8;
-  background-image: url(images/dashed.png);
+  
+  background: linear-gradient(45deg, #e9e9e9 2.5%, #fff 2.5%, #fff 47.5%, #e9e9e9 47.5%, #e9e9e9 52.5%, #fff 52.5%, #fff 97.5%, #e9e9e9 97.5%);
+  background-size: 10px 10px;
+  background-position: 50px 50px;
+
   text-align: center;
   height: 100px;
   width: 95px;
@@ -692,13 +707,13 @@ hr.sm {
   display: block;
 }
 .event-list-item-info {
- 
+  padding-left: 5px;
   padding-bottom: 34px;
-  width: 64%;
+  width: 100%;
   padding-right: 2%;
   border-right: 2px solid #f8f8f8;
-  margin-right: 2%;
-  clear: both;
+  
+  
 }
 .event-list-item-info .lined-info:first-child {
   padding-top: 0;
@@ -713,9 +728,10 @@ hr.sm {
 .lined-info h4 {
   margin-bottom: 0;
   letter-spacing: 0;
-  text-transform: none;
+  color: green;
   font-weight: 400;
   font-size: 17px;
+  text-decoration-color: rgb(84, 110, 145);
     
 }
 h4 a {
@@ -781,3 +797,162 @@ h4 a {
 
 
 
+
+
+/*  media queries  */
+@media (max-width: 1260px) {
+  header {
+    padding: 0 20px;
+  }
+
+  .menu-toggle {
+    display: block;
+    font: inherit;
+    font-size: 100%
+  }
+
+  header nav {
+    position: absolute;
+    width: 100%;
+    height: calc(100vh - 50px);
+    background-color: #ffffff;
+    top: 54px;
+    right: -100%;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    display: none;
+    overflow: scroll;
+  }
+
+  header nav.active {
+    right: 0;
+  }
+
+  header nav ul {
+    display: block;
+    text-align: center;
+  }
+
+  header nav ul li a {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  }
+
+  .text-content {
+    position: absolute;
+    top: 14%;
+  }
+
+  .contact-info {
+    flex-direction: column;
+  }
+
+  .card {
+    width: 50%;
+    max-width: 300px;
+    margin: 10px 0;
+  }
+
+  .encart-notre-eglise-vignette{
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    width: 80%;
+    left: 10%;
+  }
+  
+  .encart-notre-eglise-photo {
+    display: flex;
+    width: 40%;
+  }
+
+  .encart-Calendrier-vignette{
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    width: 80%;
+    left: 10%;
+  }
+
+  .encart-Calendrier-text{
+    width: 100%;
+
+  }
+  
+  .encart-Calendrier-photo {
+    display: flex;
+    width: 100%;
+  }
+
+  .encart-audio-vignette{
+    display: flex;
+    flex-direction: column;
+    height: 1000px;
+    width: 80%;
+    align-content: center;
+    left: 10%;
+    
+  }
+  
+  .encart-audio-photo {
+    display: flex;
+    width: 110%;
+    background-image: url("./images/mic-1.jpg");
+    
+  }
+
+  .encart-audio-box{
+    display: flex;
+    height: 800px;
+  }
+  
+
+
+
+
+}
+
+
+
+@media (max-width: 800px) {
+
+  .text-content {
+    position: relative;
+    top: 0%;
+    justify-content: center;
+    right: 20%;
+    border-left: 0px solid #fff ;
+    height: 0px;
+    align-items: center;
+    padding-left: 0px;
+  }
+
+  .item-1, 
+  .item-2, 
+  .item-3 {
+    position: absolute;
+    display: block;
+    top: 4em;
+    
+
+  }
+  
+
+  @keyframes anim-1 {
+    0%, 8.3% { left: -100%; opacity: 0; }
+    8.3%,25% { left: 22%; opacity: 1; }
+    33.33%, 100% { left: 110%; opacity: 0; }
+  }
+  
+  @keyframes anim-2 {
+    0%, 33.33% { left: -100%; opacity: 0; }
+    41.63%, 58.29% { left: 22%; opacity: 1; }
+    66.66%, 100% { left: 110%; opacity: 0; }
+  }
+  
+  @keyframes anim-3 {
+    0%, 66.66% { left: -100%; opacity: 0; }
+    74.96%, 91.62% { left: 22%; opacity: 1; }
+    100% { left: 110%; opacity: 0; }
+  }
+  
+}
