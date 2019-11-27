@@ -800,6 +800,30 @@ h4 a {
 
 
 /*  media queries  */
+
+@media (max-width: 850px) {
+
+  .encart-Calendrier-vignette{
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    width: 80%;
+    left: 10%;
+  }
+
+  .encart-Calendrier-text{
+    width: 100%;
+
+  }
+  
+  .encart-Calendrier-photo {
+    display: flex;
+    width: 100%;
+  } 
+
+}
+
+
 @media (max-width: 1260px) {
   header {
     padding: 0 20px;
@@ -865,24 +889,15 @@ h4 a {
     width: 30%;
   }
 
-/*   
+
   .encart-Calendrier-vignette{
-    display: flex;
-    flex-direction: column;
-    height: 500px;
+
+    height: 100%;
     width: 80%;
     left: 10%;
   }
 
-  .encart-Calendrier-text{
-    width: 100%;
 
-  }
-  
-  .encart-Calendrier-photo {
-    display: flex;
-    width: 100%;
-  } */
 
   .encart-audio-vignette{
     display: flex;
