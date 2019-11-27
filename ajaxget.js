@@ -25,11 +25,11 @@ var titreElts = document.querySelectorAll(".event-list-item-info");
 var dateAujourdui = new Date();
 dateAujourdui.getDate();
 var dateJour = dateAujourdui.getDate();
-console.log(dateJour);
+//console.log(dateJour);
 
 dateAujourdui.getMonth();
 dateAujourdui.getFullYear();
-console.log(`Nous sommes le :${dateAujourdui.getDate()} ${dateAujourdui.getMonth()} ${dateAujourdui.getFullYear()} `);
+//console.log(`Nous sommes le :${dateAujourdui.getDate()} ${dateAujourdui.getMonth()} ${dateAujourdui.getFullYear()} `);
 
 // console.log(titreElts);
 
@@ -47,15 +47,20 @@ ajaxGet(lien, function (reponse) {
 var dateEvent = new Date (eventCalend.start.dateTime);
 var moisEvent = dateEvent.getMonth();
 var joursEvent = dateEvent.getDay();
-console.log(moisEvent);
+var heuresEvent = dateEvent.getHours();
+var minutesEvent = dateEvent.getMinutes();
+//formatage de la date pour que les minutes affiche le 0 supplementaire
+if (heuresEvent <10) {heuresEvent = "0" + heuresEvent};
+if (minutesEvent <10) {minutesEvent = "0" + minutesEvent};
+//console.log(heuresEvent+'H'+minutesEvent+'min');
 
 var months = ['JANV','FEVR','MARS','AVRI','MAI','JUIN','JUIL','AOUT',' SEPT','OCT','NOV','DEC'];
 var days = ['Dimanche','Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi'];
 
  var mois = months[moisEvent];
  var jours = days[joursEvent];
-console.log(mois);
-console.log(jours);
+//console.log(mois);
+//console.log(jours);
 
     const innerContent =
       `
@@ -73,8 +78,9 @@ console.log(jours);
                                 <div class="lined-info">
                                   <span class="meta-data">
                                     <i class="fa fa-clock-o"></i> ${jours}
-                                    <span class="event-time">${`text a placer`}</span>
-                                    <span class="label label-primary">A venir</span>
+                                    <span class="event-time">${heuresEvent} H${minutesEvent}</span>
+                                    <span style="background-color:#3bafda;color:white;padding: 0.3em .3em .3em;
+                                    font-size: 10px;"class="label label-primary">A venir</span>
                                   </span>
                                 </div>
                   
@@ -87,25 +93,9 @@ console.log(jours);
                             </div>
           </div>
       `;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
     calendarElt.innerHTML += innerContent;
-    // titreElts.forEach(function(titreElt){
-
-
-    // });
+  
 
   });
 });

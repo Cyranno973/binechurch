@@ -1,7 +1,7 @@
 
 
 
-console.log("yes");
+
 var navElt = document.getElementById('main-nav');
 var menuElt = document.getElementById('iconeMenu');
 menuElt.addEventListener('click', (e) => {
