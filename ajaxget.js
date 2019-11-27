@@ -36,31 +36,47 @@ dateAujourdui.getFullYear();
 ajaxGet(lien, function (reponse) {
 
   var eventCalends = JSON.parse(reponse);
-
-  eventCalends.items.forEach(function (eventCalend) {
-
+// slice permet de definir quelle portion du tableau jutilise ou montre
+  eventCalends.items.slice(0, 3).forEach(function (eventCalend) {
+ //   if (eventCalend > 4) {
     var reponseDate = eventCalend.start.dateTime;
     // console.log(`${reponseDate.charAt(8)}${reponseDate.charAt(9)}`);
     var result = reponseDate.charAt(8) + reponseDate.charAt(9);
-   // console.log(result);
+    // console.log(result);
 
-var dateEvent = new Date (eventCalend.start.dateTime);
-var moisEvent = dateEvent.getMonth();
-var joursEvent = dateEvent.getDay();
-var heuresEvent = dateEvent.getHours();
-var minutesEvent = dateEvent.getMinutes();
-//formatage de la date pour que les minutes affiche le 0 supplementaire
-if (heuresEvent <10) {heuresEvent = "0" + heuresEvent};
-if (minutesEvent <10) {minutesEvent = "0" + minutesEvent};
-//console.log(heuresEvent+'H'+minutesEvent+'min');
+    var debutDateEvent = new Date(eventCalend.start.dateTime);
+    var debutMoisEvent = debutDateEvent.getMonth();
+    var debutJoursEvent = debutDateEvent.getDay();
+    var debutHeuresEvent = debutDateEvent.getHours();
+    var debutMinutesEvent = debutDateEvent.getMinutes();
+    //formatage de la date pour que les minutes affiche le 0 supplementaire
+    if (debutHeuresEvent < 10) {
+      debutHeuresEvent = "0" + debutHeuresEvent
+    };
+    if (debutMinutesEvent < 10) {
+      debutMinutesEvent = "0" + debutMinutesEvent
+    };
+    //console.log(debutHeuresEvent+'H'+debutMinutesEvent+'min');
+    var finDateEvent = new Date(eventCalend.end.dateTime);
+    var finMoisEvent = finDateEvent.getMonth();
+    var finJoursEvent = finDateEvent.getDay();
+    var finHeuresEvent = finDateEvent.getHours();
+    var finMinutesEvent = finDateEvent.getMinutes();
 
-var months = ['JANV','FEVR','MARS','AVRI','MAI','JUIN','JUIL','AOUT',' SEPT','OCT','NOV','DEC'];
-var days = ['Dimanche','Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi'];
+    if (finHeuresEvent < 10) {
+      finHeuresEvent = "0" + finHeuresEvent
+    };
+    if (finMinutesEvent < 10) {
+      finMinutesEvent = "0" + finMinutesEvent
+    };
 
- var mois = months[moisEvent];
- var jours = days[joursEvent];
-//console.log(mois);
-//console.log(jours);
+    var months = ['JANV', 'FEVR', 'MARS', 'AVRI', 'MAI', 'JUIN', 'JUIL', 'AOUT', ' SEPT', 'OCT', 'NOV', 'DEC'];
+    var days = ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'];
+
+    var mois = months[debutMoisEvent];
+    var jours = days[debutJoursEvent];
+    //console.log(mois);
+    //console.log(jours);
 
     const innerContent =
       `
@@ -68,7 +84,7 @@ var days = ['Dimanche','Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi'];
                             <div class="event-list-item-date">
                                 <span class="event-date">
                                 <span class="event-day">${result}</span>
-                                <span class="event-month">${mois}${` ${dateEvent.getYear()-100}`}</span></span>
+                                <span class="event-month">${mois}${` ${debutDateEvent.getYear()-100}`}</span></span>
                             </div>
                             <div class="event-list-item-info">
                                 <div class="lined-info">
@@ -77,8 +93,8 @@ var days = ['Dimanche','Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi'];
                   
                                 <div class="lined-info">
                                   <span class="meta-data">
-                                    <i class="fa fa-clock-o"></i> ${jours}
-                                    <span class="event-time">${heuresEvent} H${minutesEvent}</span>
+                                    <i class="fa fa-clock-o"></i> Ce ${jours} de
+                                    <span class="event-time">${debutHeuresEvent}H${debutMinutesEvent} à ${finHeuresEvent}H${finMinutesEvent}</span>
                                     <span style="background-color:#3bafda;color:white;padding: 0.3em .3em .3em;
                                     font-size: 10px;"class="label label-primary">A venir</span>
                                   </span>
@@ -93,9 +109,9 @@ var days = ['Dimanche','Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi'];
                             </div>
           </div>
       `;
-    
+
     calendarElt.innerHTML += innerContent;
-  
+//}
 
   });
 });
