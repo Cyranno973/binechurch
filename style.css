@@ -725,11 +725,11 @@ hr.sm {
   padding: 5px 0;
   clear: both;
 }
-.lined-info h4 {
+.lined-info h4 a{
   margin-bottom: 0;
   letter-spacing: 0;
-  color: green;
-  font-weight: 400;
+  color: #3bafda;
+  font-weight: 800;
   font-size: 17px;
   text-decoration-color: rgb(84, 110, 145);
     
@@ -862,9 +862,10 @@ h4 a {
   
   .encart-notre-eglise-photo {
     display: flex;
-    width: 40%;
+    width: 30%;
   }
 
+/*   
   .encart-Calendrier-vignette{
     display: flex;
     flex-direction: column;
@@ -881,7 +882,7 @@ h4 a {
   .encart-Calendrier-photo {
     display: flex;
     width: 100%;
-  }
+  } */
 
   .encart-audio-vignette{
     display: flex;
