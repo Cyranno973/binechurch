@@ -285,7 +285,9 @@ video {
   transform: rotateZ(0deg);
   animation: move 2s;
 }
-
+.label label-primary{
+  background-color: #3bafda;
+}
 /*
 @keyframes move {
   from { margin-left: 200px; }
