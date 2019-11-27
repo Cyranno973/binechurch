@@ -795,6 +795,12 @@ h4 a {
   clear: both
 }
 
+#contenuAgenda{
+  display: flex;
+width: 100%;
+justify-content: center;
+}
+
 
 
 
