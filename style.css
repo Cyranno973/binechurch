@@ -850,6 +850,7 @@ h4 a {
 
   header nav.active {
     right: 0;
+    display: block;
   }
 
   header nav ul {

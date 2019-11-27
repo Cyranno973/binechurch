@@ -1,17 +1,16 @@
 
 
-//menu burger
-$(document).ready(function() {
-  $('.menu-toggle').click(function() {
-    $('nav').toggleClass('active');
 
-  })
-})
 console.log("yes");
 var navElt = document.getElementById('main-nav');
 var menuElt = document.getElementById('iconeMenu');
 menuElt.addEventListener('click', (e) => {
-  navElt.style.display = "block";
+  if (navElt.classList.contains("active") === true) {
+    navElt.classList.remove("active");
+  } else {
+    navElt.classList.add("active");
+
+  }
 });
 
 
