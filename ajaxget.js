@@ -38,7 +38,7 @@ ajaxGet(lien, function (reponse) {
   var eventCalends = JSON.parse(reponse);
 // slice permet de definir quelle portion du tableau jutilise ou montre
   eventCalends.items.slice(0, 3).forEach(function (eventCalend) {
- //   if (eventCalend > 4) {
+ //  
     var reponseDate = eventCalend.start.dateTime;
     // console.log(`${reponseDate.charAt(8)}${reponseDate.charAt(9)}`);
     var result = reponseDate.charAt(8) + reponseDate.charAt(9);
@@ -111,7 +111,7 @@ ajaxGet(lien, function (reponse) {
       `;
 
     calendarElt.innerHTML += innerContent;
-//}
+
 
   });
 });

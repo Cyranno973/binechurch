@@ -413,33 +413,34 @@ padding-bottom: 3%;
   height: 500px;
 }
 
-
+ /*
 .encart-audio-box-BG1 {
-  /* The image used */
+  /* The image used 
   background-image: url("./images/foule.jpg");
   width: 50%; 
 
-  /* Create the parallax scrolling effect */
+  /* Create the parallax scrolling effect 
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-
-
+*/
+ /* 
 .encart-audio-box-BG2 {
-  /* The image used */
-  right: 0;
+ The image used 
   background-image: url("./images/foule.jpg");
   width: 50%; 
 
-  /* Create the parallax scrolling effect */
+   Create the parallax scrolling effect 
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
+  right: 0;
+  */
 /* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */
 @media only screen and (max-device-width: 1366px) {
   .parallax {
@@ -449,7 +450,7 @@ padding-bottom: 3%;
 
 .encart-audio-vignette {
   top: 0;
-  left: 20%;
+  
   height: 500px;
   display: flex;
   position: absolute;
@@ -458,7 +459,7 @@ padding-bottom: 3%;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
   border-radius: 10px;
-  width: 60%;
+  width: 100%;
   background: #fff none repeat scroll 0 0;
 
   
@@ -468,20 +469,7 @@ padding-bottom: 3%;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
-.encart-audio-photo {
-  display: flex;
-  height: 500px;
-  background-image: url("./images/mic-1-1.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 60%;
 
-}
-.encart-audio-photo img{
-  height: 500px;
-  border-radius: 10px 0 0 10px;
-}
 
 .encart-audio-text{
   top: 0;
@@ -910,18 +898,12 @@ justify-content: center;
     display: flex;
     flex-direction: column;
     height: 1000px;
-    width: 80%;
+    width: 100%;
     align-content: center;
     left: 10%;
     
   }
   
-  .encart-audio-photo {
-    display: flex;
-    width: 110%;
-    background-image: url("./images/mic-1.jpg");
-    
-  }
 
   .encart-audio-box{
     display: flex;
